@@ -1,0 +1,15 @@
+{
+  "name": "node-stats-sit79",
+  "version": "1.0.0",
+  "description": "A simple CLI that reads all subfolders recursively and finds all node_modules folders and their respective sizes.",
+  "main": "index.js",
+  "repository": "git@github.com:DCI-fbw11/node-stats-sit79.git",
+  "author": "sit79 <stefan.tolksdorf@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "node-stats": "bin/node-stats"
+  },
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
+}
