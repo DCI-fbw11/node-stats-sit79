@@ -8,7 +8,7 @@ const menus = {
   scan: `
     node-stats scan <options>
 
-    path ............. path to folder (if no folder is given, the current folder will be the default)\n`
+    path ............. scan a specific folder\n`
 };
 
 module.exports = args => {
