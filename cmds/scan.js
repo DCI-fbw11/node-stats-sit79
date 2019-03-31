@@ -2,9 +2,12 @@ const calc = require("../utils/calc");
 const findNodeModulesFolders = require("../utils/findNodeModulesFolders");
 
 const scan = args => {
+  // main part
   let path = args.path || process.cwd();
   const nm_folders = findNodeModulesFolders(path);
   const result = calc(nm_folders);
+
+  // preparing process.stdout.write
   const numberOfProjects = result.length;
   let totalSize = 0;
   for (let entry of result) {

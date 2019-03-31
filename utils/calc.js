@@ -23,10 +23,11 @@ const calcFilesAndSubfolders = path => {
   const folders = [];
   if (filesAndFolders.length !== 0) {
     for (let item of filesAndFolders) {
-      // Visibility of files/folders disregarded (".DS_Store" problem)
-      if (item.isDirectory()) {
+      // Hidden directories will not be searched
+      if (item.isDirectory() && item.name[0] !== ".") {
         folders.push(item);
-      } else if (item.isFile()) {
+        // Hidden files will not be searched (".DS_Store" problem on Mac)
+      } else if (item.isFile() && item.name[0] !== ".") {
         files.push(item);
       }
     }
